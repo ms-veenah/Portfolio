@@ -7,7 +7,7 @@
    <style>
     /* Body and general */
     body { 
-        font-family: Arial, sans-serif; 
+      font-family: Arial, sans-serif; 
       margin: 0; 
       padding: 0; 
       line-height: 1.6; 
@@ -64,15 +64,25 @@
       transform: scale(1.02); /* Subtle zoom on hover */
     }
 
-    /* Links */
-    a { 
-      color: #D4B79B; /* Gold */
-      text-decoration: none; 
-      transition: color 0.3s ease; 
+    /* Links inside project cards */
+    .project a {
+      color: #1A1A1A; /* Black text for contrast */
+      text-decoration: underline;
+      transition: color 0.3s ease;
     }
-    a:hover { 
+    .project a:hover {
+      color: #9B1B30; /* Burgundy on hover */
+    }
+
+    /* Contact links */
+    #contact a {
+      color: #D4B79B; /* Gold */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    #contact a:hover {
       color: #A7B79D; /* Sage Green on hover */
-      text-decoration: underline; 
+      text-decoration: underline;
     }
 
     /* Skills */
