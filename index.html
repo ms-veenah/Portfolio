@@ -1,162 +1,388 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Analysis Portfolio - Davina Oppong-Donkor</title>
-   <style>
-    /* Body and general */
-      body { 
-      font-family: Arial, sans-serif; 
-      margin: 0; 
-      padding: 0; 
-      line-height: 1.6; 
-      background: #F1E1C6; /* Light Beige */
-      color: #1A1A1A; /* Black text */
-    }
+    <title>Davina Oppong-Donkor | Data Analyst Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Portfolio of Davina Oppong-Donkor, a passionate Data Analyst skilled in Power BI, SQL, Python, Excel, and data visualization. Transforming data into actionable insights." />
+    <meta name="keywords" content="Data Analyst, Power BI, SQL, Python, Excel, Tableau, Data Visualization, Portfolio, Davina Oppong-Donkor" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Font Family Standardization --- */
+        body, p, li, dd, dt, h1, h2, h3, h4, h5 {
+            font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+        }
+        h1, h2, h3, h4, h5 {
+            color: #111;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+        p, li, dd, dt {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.7em;
+        }
+        a {
+            color: #0056b3;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header Image and Intro */
+        #header .intro {
+            text-align: center;
+            color: #111;
+        }
+        #header p {
+            color: #222;
+            line-height: 1.6em;
+        }
+        /* Standardize list and stats spacing */
+        ul.statistics li strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 0.3em;
+        }
+        ul.features li h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3em;
+        }
+        ul.features li p {
+            font-size: 1rem;
+            line-height: 1.65em;
+        }
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #header .intro img {
+                width: 120px;
+                height: 120px;
+            }
+            ul.statistics li, ul.features li {
+                text-align: center;
+            }
+        }
+        /* Contact Section Layout */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem; /* spacing between info and form */
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
 
-    /* Header */
-    header { 
-      background: linear-gradient(to bottom, #E6D6B8, #9B1B30); /* Light → Burgundy */
-      color: #FFFFFF; 
-      padding: 6rem 2rem; /* Taller to show gradient */
-      text-align: center; 
-    }
-    header img { 
-      width: 150px; 
-      border-radius: 50%; 
-      margin-bottom: 1rem; 
-    }
+        .contact-info, .contact-form-wrapper {
+            flex: 1 1 320px; /* responsive width, min 320px */
+            max-width: 400px;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
 
-    /* Sections */
-    section { 
-      padding: 2rem; 
-      max-width: 900px; 
-      margin: auto; 
-    }
-    h2 { 
-      border-bottom: 2px solid #9B1B30; /* Burgundy */
-      padding-bottom: 0.5rem; 
-      color: #9B1B30; 
-    }
+        .contact-info dl.alt {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.8rem;
+            font-size: 0.95rem;
+        }
 
-    /* Project cards */
-    .project { 
-      background: #A7B79D; /* Sage Green */
-      padding: 1.5rem; 
-      margin-bottom: 1.5rem; 
-      border-radius: 12px; 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
-    }
-    .project:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 8px 16px rgba(155, 27, 48, 0.4); 
-      background: #9eb89a; 
-    }
-    .project img { 
-      width: 100%; 
-      border-radius: 8px; 
-      margin-bottom: 1rem; 
-      transition: transform 0.3s ease; 
-    }
-    .project img:hover {
-      transform: scale(1.02); 
-    }
+        .contact-info dt {
+            font-weight: 700;
+            color: #111;
+        }
 
-    /* Project links */
-    .project a {
-      color: #1A1A1A; /* Black text for readability */
-      text-decoration: none; 
-      transition: color 0.3s ease;
-    }
-    .project a:hover {
-      color: #9B1B30; /* Burgundy on hover */
-    }
+        .contact-info dd {
+            margin: 0;
+            line-height: 1.5em;
+            color: #333;
+            word-break: break-word;
+        }
 
-    /* Contact links */
-   #contact a {
-  color: #1A1A1A; /* Black text for readability */
-  text-decoration: none;   /* Remove underline */
-  transition: color 0.3s ease;
-}
+        .contact-info a {
+            color: #0056b3;
+            text-decoration: none;
+        }
 
-#contact a:hover {
- color: #9B1B30; /* Burgundy on hover */
-}
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
-    /* Skills */
-    ul { list-style-type: square; }
+        /* Contact Form Styling */
+        .contact-form-wrapper form fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    /* Footer */
-    footer { 
-      background: linear-gradient(to bottom, #9B1B30, #E6D6B8); /* Burgundy → Light */
-      color: #FFFFFF; 
-      padding: 3rem 2rem; 
-      text-align: center; 
-      margin-top: 2rem; 
-    }
-  </style>
+        .contact-form-wrapper label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #111;
+        }
+
+        .contact-form-wrapper input,
+        .contact-form-wrapper textarea {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: "Inter", sans-serif;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-form-wrapper input:focus,
+        .contact-form-wrapper textarea:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0,86,179,0.3);
+        }
+
+        .contact-form-wrapper input[type="submit"] {
+            background: #0056b3;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .contact-form-wrapper input[type="submit"]:hover {
+            background: #003f80;
+        }
+
+        .form-note {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive Adjustment */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="is-preload">
 
-  <!-- Home / Introduction -->
-  <header>
-    <img src="project.jpg" alt="Davina">
-    <h1>Davina Oppong-Donkor</h1>
-    <p>Data Analyst | Python, SQL, Power BI | Turning data into insights</p>
-  </header>
+<div id="wrapper">
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a data analyst passionate about turning raw data into actionable insights. Skilled in Python, SQL, Tableau, Power BI, and Excel, I analyze data to help businesses make informed decisions. I enjoy creating dashboards, visualizations, and reports that clearly communicate complex information.</p>
-  </section>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="intro">
+            <img src="images/davina.jpg" alt="Davina Oppong-Donkor, Data Analyst" style="width:180px; height:180px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.2); margin-bottom:20px;">
+            <h1>Davina Oppong-Donkor</h1>
+            <p>Data Analyst | Power BI | SQL | Python | Excel</p>
+            <p>
+                Accra, Ghana | <a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a><br/>
+                <a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">LinkedIn</a> |
+                <a href="https://github.com/davinaoppong-donkor" target="_blank" rel="noopener">GitHub</a>
+            </p>
+        </div>
+    </header>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
+    <!-- Navigation -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="project">
-      <h3>Customer Sales Dashboard</h3>
-      <img src="images/project1.png" alt="Sales Dashboard">
-      <p>Analyzed sales data to identify trends and top-performing products.</p>
-      <p><strong>Tools:</strong> Python, Pandas, Power BI</p>
-      <a href="https://github.com/yourusername/sales-dashboard" target="_blank">View Code</a>
+    <!-- Main -->
+    <div id="main">
+
+        <!-- About Section -->
+        <section id="about" class="main">
+            <div class="spotlight">
+                <div class="content">
+                    <header class="major">
+                        <h2>About Me</h2>
+                    </header>
+                    <p>
+                        I’m a passionate <strong>Data Analyst</strong> who transforms data into actionable insights. 
+                        I specialize in <strong>data cleaning, visualization, and storytelling</strong> using tools like 
+                        <strong>Power BI, Excel, Python,</strong> and <strong>SQL.</strong>  
+                        Through the <strong>Generation Ghana Data Analytics Program</strong>, I’ve developed hands-on experience 
+                        in analyzing complex datasets to help businesses make informed, data-driven decisions.
+                    </p>
+                </div>
+                <span class="image"><img src="images/analytics.jpg" alt="Data Analytics Visualization" /></span>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="main special">
+            <header class="major">
+                <h2>Technical Skills</h2>
+            </header>
+            <ul class="statistics">
+                <li class="style1"><strong>Power BI</strong> Dashboard Design</li>
+                <li class="style2"><strong>SQL</strong> Data Querying</li>
+                <li class="style3"><strong>Python</strong> Pandas, NumPy</li>
+                <li class="style4"><strong>Excel</strong> Advanced Formulas, Pivot Tables</li>
+                <li class="style5"><strong>Tableau</strong> Data Visualization</li>
+            </ul>
+            <p class="content">
+                Additional Tools: Google Sheets, Data Wrangling, DAX, Data Storytelling, Basic Statistics.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="main special">
+            <header class="major">
+                <h2>Projects</h2>
+                <p>Practical projects demonstrating analytical problem-solving and visualization skills.</p>
+            </header>
+
+            <ul class="features">
+                <li>
+                    <span class="icon solid major style1 fa-chart-bar"></span>
+                    <h3>Book Sales & Pricing Dashboard (Power BI)</h3>
+                    <p>
+                        Designed a Power BI dashboard to analyze book sales, author performance, and pricing trends.
+                        Used DAX functions for KPIs and data storytelling.
+                    </p>
+                    <a href="https://github.com/davinaoppong-donkor/Book-Sales-Dashboard" target="_blank" rel="noopener" class="button">View Project</a>
+                </li>
+
+                <li>
+                    <span class="icon solid major style3 fa-database"></span>
+                    <h3>Customer Purchase Insights (SQL + Excel)</h3>
+                    <p>
+                        Queried a customer dataset using SQL to identify top-selling products and recurring customers.
+                        Visualized trends in Excel for management insights.
+                    </p>
+                    <a href="https://github.com/davinaoppong-donkor/Customer-Purchase-Insights" target="_blank" rel="noopener" class="button">View Project</a>
+                </li>
+
+                <li>
+                    <span class="icon solid major style5 fa-globe"></span>
+                    <h3>Tourism Trends Analytics (Tableau)</h3>
+                    <p>
+                        Created an interactive Tableau dashboard to visualize visitor demographics and seasonal trends
+                        across regions, enabling better tourism planning.
+                    </p>
+                    <a href="https://github.com/davinaoppong-donkor/Tourism-Trends-Analytics" target="_blank" rel="noopener" class="button">View Project</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="main special">
+            <header class="major">
+                <h2>Education & Certifications</h2>
+            </header>
+            <ul class="statistics">
+                <li class="style1">
+                    <span class="icon solid fa-graduation-cap"></span>
+                    <strong>Generation Ghana Data Analytics Program</strong><br>2025
+                </li>
+                <li class="style2">
+                    <span class="icon solid fa-university"></span>
+                    <strong>BA, Culture and Tourism</strong><br>KNUST, 2020
+                </li>
+                <li class="style3">
+                    <span class="icon solid fa-certificate"></span>
+                    SCILLS Digital Marketing – Blossom Academy (2024)
+                </li>
+                <li class="style4">
+                    <span class="icon solid fa-laptop"></span>
+                    Virtual Assistant Program – ALX (2024)
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="main special">
+            <div class="contact-header">
+                <header class="major">
+                    <h2>Contact Me</h2>
+                </header>
+                <p>Let’s connect! I’m open to collaborations, analytics projects, and career opportunities.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <dl class="alt">
+                        <dt>Location</dt>
+                        <dd>Accra, Ghana</dd>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a></dd>
+                        <dt>GitHub</dt>
+                        <dd><a href="https://github.com/davinaoppong-donkor" target="_blank" rel="noopener">github.com/davinaoppong-donkor</a></dd>
+                        <dt>LinkedIn</dt>
+                        <dd><a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">linkedin.com/in/davina-oppong-donkor</a></dd>
+                    </dl>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form method="post" action="https://formspree.io/f/YOUR_FORMSPREE_ID" enctype="multipart/form-data">
+                        <fieldset>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required aria-label="Subject">
+
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+
+                            <input type="submit" value="Send Message">
+                        </fieldset>
+                    </form>
+                    <p class="form-note">Note: This form uses Formspree for email delivery. Replace the action URL with your endpoint for functionality.</p>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <div class="project">
-      <h3>SQL E-commerce Analysis</h3>
-      <img src="images/project2.png" alt="E-commerce Analysis">
-      <p>Performed SQL queries to analyze customer behavior and order patterns in an e-commerce dataset.</p>
-      <p><strong>Tools:</strong> SQL, Tableau</p>
-      <a href="https://github.com/yourusername/sql-ecommerce-analysis" target="_blank">View Code</a>
-    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Davina Oppong-Donkor | Data Analytics Portfolio</p>
+    </footer>
 
-  </section>
+</div>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
-      <li>SQL (PostgreSQL, MySQL)</li>
-      <li>Data Visualization (Tableau, Power BI)</li>
-      <li>Excel & Google Sheets</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:oppongdonkordavina@gmail.com" style="color:#9B1B30;">oppongdonkordavina@gmail.com</a></p>
-  <p>LinkedIn: <a href="http://linkedin.com/in/davina-oppong-donkor" target="_blank" style="color:#9B1B30;">http://linkedin.com/in/davina-oppong-donkor</a></p>
-  <p>GitHub: <a href="https://github.com/ms-veenah/" target="_blank" style="color:#9B1B30;">https://github.com/ms-veenah/</a></p>
-</section>
-
-  <footer>
-    <p>© 2025 Davina Oppong-Donkor</p>
-  </footer>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    (function($) {
+        'use strict';
+        var $window = $(window),
+            $document = $(document);
+        $window.on('load', function() {
+            window.setTimeout(function() {
+                document.body.classList.remove('is-preload');
+            }, 100);
+        });
+    })(jQuery);
+</script>
 
 </body>
 </html>
