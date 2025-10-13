@@ -3,17 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Portfolio of Davina Oppong-Donkor, a passionate Data Analyst skilled in Power BI, SQL, Python, Excel, and data visualization. Transforming data into actionable insights." />
+    <meta name="keywords" content="Data Analyst, Power BI, SQL, Python, Excel, Tableau, Data Visualization, Portfolio, Davina Oppong-Donkor" />
     <title>Davina Oppong-Donkor | Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: "Poppins", sans-serif;
-            background: #f8f9fa;
+            font-family: "Poppins", sans-serif; /* Recommended professional font family */
+            background: #f8f9fa; /* Light grey background */
             color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
         header {
             text-align: center;
             padding: 3rem 1rem;
+            background: #fff; /* White header background */
+            border-bottom: 1px solid #eee;
         }
         .profile-img {
             width: 180px;
@@ -24,49 +32,67 @@
         }
         h1 {
             margin-top: 1rem;
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #111;
         }
         h2 {
-            color: #0078d7;
-            margin-bottom: 1rem;
+            color: #0078d7; /* Professional Blue */
+            margin-top: 0;
+            margin-bottom: 1.5rem;
             text-align: center;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
         section {
             max-width: 900px;
             margin: 2rem auto;
             background: #fff;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
         .project {
             background: #f4f6f8;
             padding: 1.5rem;
             border-radius: 10px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #0078d7; /* Blue accent border */
         }
         .project h3 {
-            color: #0078d7;
+            color: #111;
             margin-bottom: 0.5rem;
+            font-size: 1.3rem;
         }
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             justify-content: center;
+            padding: 0;
+            list-style: none; /* remove bullet points */
+        }
+        .skills-list li {
+            margin: 0;
         }
         .skills-list span {
             background: #0078d7;
             color: #fff;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 25px;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        #education ul {
+            padding-left: 20px;
+            line-height: 1.8;
         }
         footer {
             text-align: center;
             padding: 2rem;
             color: #666;
+            background: #f8f9fa;
         }
         a {
             color: #0078d7;
@@ -75,76 +101,129 @@
         a:hover {
             text-decoration: underline;
         }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            gap: 2rem;
+        }
+        nav a {
+            color: #0078d7;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #005a9e;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            section {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <header>
-    <img src="images/project.jpg" alt="Davina Oppong-Donkor" class="profile-img">
+    <img src="images/pic01.jpg" alt="Davina Oppong-Donkor, professional headshot as Data Analyst" class="profile-img">
     <h1>Davina Oppong-Donkor</h1>
+    <p class="tagline">Data Analyst Freelancer</p>
     <p>Accra, Ghana | <a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a></p>
     <p>
-        <a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">LinkedIn</a> |
+        <a href="https://github.com/davinaoppong-donkor" target="_blank" rel="noopener">GitHub</a>
     </p>
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
+    <h2>Professional Summary</h2>
     <p>
         I am a passionate <strong>Data Analyst</strong> with hands-on experience in transforming raw data into meaningful insights. 
-        Through Generation Ghana’s Data Analytics program, I developed practical skills in data cleaning, visualization, 
+        Through the Generation Data Analytics program, I developed practical skills in data cleaning, visualization, 
         SQL querying, and business storytelling. My goal is to leverage data to drive smarter decisions and improve 
-        business performance across industries.
+        business performance across various industries.
     </p>
 </section>
 
 <section id="skills">
     <h2>Technical Skills</h2>
-    <div class="skills-list">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>Excel (Advanced)</span>
-        <span>Data Cleaning</span>
-        <span>Data Visualization</span>
-        <span>Statistics & Insights</span>
-        <span>DAX</span>
-        <span>Google Sheets</span>
-        <span>Data Storytelling</span>
-    </div>
+    <ul class="skills-list">
+        <li><span>Python</span></li>
+        <li><span>SQL</span></li>
+        <li><span>Power BI</span></li>
+        <li><span>Tableau</span></li>
+        <li><span>Excel (Advanced)</span></li>
+        <li><span>DAX</span></li>
+        <li><span>Data Cleaning</span></li>
+        <li><span>Data Visualization</span></li>
+        <li><span>Statistics & Insights</span></li>
+        <li><span>Google Sheets</span></li>
+        <li><span>Data Storytelling</span></li>
+    </ul>
 </section>
 
 <section id="projects">
     <h2>Featured Projects</h2>
 
     <div class="project">
-        <h3> Book Sales and Pricing Dashboard | Power BI</h3>
+        <h3>Book Sales and Pricing Dashboard | Power BI</h3>
         <p>
             Built an interactive Power BI dashboard to analyze book prices, genres, and author performance. 
             Used DAX to calculate average prices, genre trends, and author profitability metrics. 
             Improved understanding of sales distribution patterns for decision-making.
         </p>
-        <p><a href="https://github.com/YOUR-GITHUB-USERNAME/Book-Sales-Dashboard" target="_blank">View Project on GitHub</a></p>
+        <p><a href="https://github.com/davinaoppong-donkor/Book-Sales-Dashboard" target="_blank" rel="noopener">View Project on GitHub</a></p>
     </div>
 
     <div class="project">
-        <h3> Customer Purchase Insights | SQL + Excel</h3>
+        <h3>Customer Purchase Insights | SQL + Excel</h3>
         <p>
-            Analyzed customer purchase behavior using SQL queries to identify high-value customers and popular products. 
+            Analyzed customer purchase behavior using complex SQL queries to identify high-value customers and popular products. 
             Visualized findings in Excel dashboards to guide targeted marketing and retention strategies.
         </p>
-        <p><a href="https://github.com/YOUR-GITHUB-USERNAME/Customer-Purchase-Insights" target="_blank">View Project on GitHub</a></p>
+        <p><a href="https://github.com/davinaoppong-donkor/Customer-Purchase-Insights" target="_blank" rel="noopener">View Project on GitHub</a></p>
     </div>
 
     <div class="project">
-        <h3> Tourism Trends Analytics | Tableau</h3>
+        <h3>Tourism Trends Analytics | Tableau</h3>
         <p>
             Created a Tableau dashboard to visualize tourism data — highlighting visitor demographics, seasonal patterns, 
             and economic impact metrics. Presented findings using interactive visual storytelling techniques.
         </p>
-        <p><a href="https://github.com/YOUR-GITHUB-USERNAME/Tourism-Trends-Analytics" target="_blank">View Project on GitHub</a></p>
+        <p><a href="https://github.com/davinaoppong-donkor/Tourism-Trends-Analytics" target="_blank" rel="noopener">View Project on GitHub</a></p>
     </div>
 </section>
 
@@ -162,13 +241,15 @@
 <section id="contact">
     <h2>Contact Me</h2>
     <p>If you’re looking for a motivated Data Analyst ready to collaborate on impactful projects, feel free to reach out!</p>
+    <p><strong>Location:</strong> Accra, Ghana</p>
     <p><strong>Email:</strong> <a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank">linkedin.com/in/davina-oppong-donkor</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">github.com/YOUR-GITHUB-USERNAME</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+233553202246">+233 (0)55 320 2246</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">linkedin.com/in/davina-oppong-donkor</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/davinaoppong-donkor" target="_blank" rel="noopener">github.com/davinaoppong-donkor</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Davina Oppong-Donkor | Data Analytics Portfolio</p>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Davina Oppong-Donkor | Data Analytics Portfolio</p>
 </footer>
 
 </body>
