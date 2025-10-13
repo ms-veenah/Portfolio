@@ -7,6 +7,24 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* --- Improved Text Visibility --- */
+			body, p, li, dd, dt {
+				color: #222 !important;
+				font-weight: 400;
+				line-height: 1.7em;
+			}
+			h1, h2, h3, h4, h5 {
+				color: #111 !important;
+				font-weight: 700;
+			}
+			a {
+				color: #0056b3;
+				font-weight: 500;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
 			/* Center and style contact section */
 			#contact dl.alt {
 				display: flex;
@@ -23,12 +41,13 @@
 			#contact dd {
 				margin: 0 0 0.8em 0;
 			}
-			#contact a {
-				text-decoration: none;
-				color: #007acc;
+			/* Header Image and Intro */
+			#header .intro {
+				text-align: center;
+				color: #111;
 			}
-			#contact a:hover {
-				text-decoration: underline;
+			#header p {
+				color: #222;
 			}
 		</style>
 	</head>
@@ -74,9 +93,10 @@
 							</header>
 							<p>
 								I’m a passionate <strong>Data Analyst</strong> who transforms data into actionable insights. 
-								I specialize in data cleaning, visualization, and storytelling using tools such as <strong>Power BI, Excel, Python,</strong> and <strong>SQL.</strong>
-								Through the <strong>Generation Ghana Data Analytics Program</strong>, I’ve developed hands-on expertise in turning complex datasets 
-								into clear, data-driven insights that inform business decisions. My goal is to continue helping organizations use data to drive growth and efficiency.
+								I specialize in <strong>data cleaning, visualization, and storytelling</strong> using tools like 
+								<strong>Power BI, Excel, Python,</strong> and <strong>SQL.</strong>  
+								Through the <strong>Generation Ghana Data Analytics Program</strong>, I’ve developed hands-on experience 
+								in analyzing complex datasets to help businesses make informed, data-driven decisions.
 							</p>
 						</div>
 						<span class="image"><img src="images/analytics.jpg" alt="Data Analytics" /></span>
@@ -104,7 +124,7 @@
 				<section id="projects" class="main special">
 					<header class="major">
 						<h2>Projects</h2>
-						<p>Hands-on Data Analytics projects demonstrating data cleaning, visualization, and storytelling.</p>
+						<p>Practical projects demonstrating analytical problem-solving and visualization skills.</p>
 					</header>
 
 					<ul class="features">
@@ -112,8 +132,8 @@
 							<span class="icon solid major style1 fa-chart-bar"></span>
 							<h3>Book Sales & Pricing Dashboard (Power BI)</h3>
 							<p>
-								Developed an interactive Power BI dashboard to analyze book sales, author performance, and pricing patterns.
-								Used DAX functions for KPI calculations and data storytelling.
+								Designed a Power BI dashboard to analyze book sales, author performance, and pricing trends.
+								Used DAX functions for KPIs and data storytelling.
 							</p>
 							<a href="https://github.com/YOUR-GITHUB-USERNAME/Book-Sales-Dashboard" target="_blank" class="button">View Project</a>
 						</li>
@@ -122,8 +142,8 @@
 							<span class="icon solid major style3 fa-database"></span>
 							<h3>Customer Purchase Insights (SQL + Excel)</h3>
 							<p>
-								Used SQL queries to identify top-selling products and customer segments. 
-								Created Excel visual dashboards to present insights on customer trends and purchase behaviors.
+								Queried a customer dataset using SQL to identify top-selling products and recurring customers.
+								Visualized trends in Excel for management insights.
 							</p>
 							<a href="https://github.com/YOUR-GITHUB-USERNAME/Customer-Purchase-Insights" target="_blank" class="button">View Project</a>
 						</li>
@@ -132,8 +152,8 @@
 							<span class="icon solid major style5 fa-globe"></span>
 							<h3>Tourism Trends Analytics (Tableau)</h3>
 							<p>
-								Visualized tourism data across regions to reveal seasonal patterns and visitor demographics using Tableau. 
-								Presented interactive dashboards for decision-making insights.
+								Created an interactive Tableau dashboard to visualize visitor demographics and seasonal trends
+								across regions, enabling better tourism planning.
 							</p>
 							<a href="https://github.com/YOUR-GITHUB-USERNAME/Tourism-Trends-Analytics" target="_blank" class="button">View Project</a>
 						</li>
@@ -170,7 +190,7 @@
 					<header class="major">
 						<h2>Contact Me</h2>
 					</header>
-					<p>Let’s connect! I’m open to collaborations, data analytics projects, and professional opportunities.</p>
+					<p>Let’s connect! I’m open to collaborations, analytics projects, and career opportunities.</p>
 					<dl class="alt">
 						<dt>Location</dt>
 						<dd>Accra, Ghana</dd>
