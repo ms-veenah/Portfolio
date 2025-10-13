@@ -34,25 +34,6 @@
 			a:hover {
 				text-decoration: underline;
 			}
-			/* Contact Section Centering + Line Spacing */
-			#contact dl.alt {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				text-align: center;
-				row-gap: 1.2em; /* spacing between contact items */
-				margin-top: 1.5em;
-			}
-			#contact dt {
-				font-weight: 700;
-				margin-bottom: 0.2em;
-				font-size: 1.05rem;
-			}
-			#contact dd {
-				margin: 0;
-				font-size: 1rem;
-				line-height: 1.6em; /* tight spacing for each contact detail */
-			}
 			/* Header Image and Intro */
 			#header .intro {
 				text-align: center;
@@ -76,17 +57,104 @@
 				font-size: 1rem;
 				line-height: 1.65em;
 			}
+			/* Contact Section Styles */
+			.contact-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				justify-content: center;
+				align-items: flex-start;
+				margin-top: 2rem;
+			}
+			.contact-info, .contact-form-wrapper {
+				flex: 1 1 320px;
+				max-width: 400px;
+				background: #f9f9f9;
+				padding: 1.5rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			}
+			.contact-info dl.alt {
+				display: flex;
+				flex-direction: column;
+				row-gap: 0.8rem;
+				font-size: 0.95rem;
+			}
+			.contact-info dt {
+				font-weight: 700;
+				color: #111;
+			}
+			.contact-info dd {
+				margin: 0;
+				line-height: 1.5em;
+				color: #333;
+				word-break: break-word;
+			}
+			.contact-info a {
+				color: #0056b3;
+				text-decoration: none;
+			}
+			.contact-info a:hover {
+				text-decoration: underline;
+			}
+			.contact-form-wrapper form fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+			.contact-form-wrapper label {
+				display: block;
+				margin-bottom: 0.3rem;
+				font-weight: 600;
+				font-size: 0.95rem;
+				color: #111;
+			}
+			.contact-form-wrapper input,
+			.contact-form-wrapper textarea {
+				width: 100%;
+				padding: 0.6rem 0.8rem;
+				margin-bottom: 1rem;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				font-size: 0.95rem;
+				font-family: "Inter", sans-serif;
+				outline: none;
+				transition: border 0.2s, box-shadow 0.2s;
+			}
+			.contact-form-wrapper input:focus,
+			.contact-form-wrapper textarea:focus {
+				border-color: #0056b3;
+				box-shadow: 0 0 5px rgba(0,86,179,0.3);
+			}
+			.contact-form-wrapper input[type="submit"] {
+				background: #0056b3;
+				color: white;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background 0.2s;
+			}
+			.contact-form-wrapper input[type="submit"]:hover {
+				background: #003f80;
+			}
+			.form-note {
+				font-size: 0.8rem;
+				color: #555;
+				margin-top: 0.5rem;
+			}
 			/* Responsive Design */
+			@media (max-width: 768px) {
+				.contact-container {
+					flex-direction: column;
+					gap: 1.5rem;
+				}
+				ul.statistics li, ul.features li {
+					text-align: center;
+				}
+			}
 			@media (max-width: 600px) {
 				#header .intro img {
 					width: 120px;
 					height: 120px;
-				}
-				#contact dl.alt {
-					row-gap: 1em;
-				}
-				ul.statistics li, ul.features li {
-					text-align: center;
 				}
 			}
 		</style>
@@ -224,7 +292,7 @@
 					</ul>
 				</section>
 
-				<!-- Redesigned Contact Section -->
+				<!-- Contact Section -->
 				<section id="contact" class="main special">
 					<div class="contact-header">
 						<header class="major">
@@ -233,9 +301,7 @@
 						<p>Let’s connect! I’m open to collaborations, analytics projects, and career opportunities.</p>
 					</div>
 					
-					<!-- Contact Container for Side-by-Side Layout -->
 					<div class="contact-container">
-						<!-- Contact Information -->
 						<div class="contact-info">
 							<dl class="alt">
 								<dt>Location</dt>
@@ -248,8 +314,7 @@
 								<dd><a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">linkedin.com/in/davina-oppong-donkor</a></dd>
 							</dl>
 						</div>
-						
-						<!-- Contact Form -->
+
 						<div class="contact-form-wrapper">
 							<form method="post" action="https://formspree.io/f/YOUR_FORMSPREE_ID" enctype="multipart/form-data">
 								<fieldset>
@@ -283,26 +348,3 @@
 		</div>
 
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			(function($) {
-				'use strict';
-				// Preload
-				var $window = $(window),
-					$document = $(document);
-				$window.on('load', function() {
-					window.setTimeout(function() {
-						document.body.classList.remove('is-preload');
-					}, 100);
-				});
-			})(jQuery);
-		</script>
-
-	</body>
-</html>
