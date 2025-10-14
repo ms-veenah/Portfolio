@@ -1,184 +1,365 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<title>Davina Oppong-Donkor | Data Analyst Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Portfolio of Davina Oppong-Donkor, a passionate Data Analyst skilled in Power BI, SQL, Python, Excel, and data visualization. Transforming data into actionable insights." />
+	<meta name="keywords" content="Data Analyst, Power BI, SQL, Python, Excel, Tableau, Data Visualization, Portfolio, Davina Oppong-Donkor" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<style>
+		/* --- Font Family & Typography --- */
+		body, p, li, dd, dt, h1, h2, h3, h4, h5 {
+			font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color: #222;
+		}
+		h1, h2, h3, h4, h5 {
+			color: #111;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+		}
+		p, li, dd, dt {
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 1.7em;
+		}
+		a {
+			color: #0056b3;
+			font-weight: 500;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+		/* Header Image & Intro */
+		#header .intro {
+			text-align: center;
+			color: #111;
+		}
+		#header p {
+			color: #222;
+			line-height: 1.6em;
+		}
+
+		/* Statistics & Features */
+		ul.statistics li strong {
+			display: block;
+			font-size: 1.05rem;
+			margin-bottom: 0.3em;
+		}
+		ul.features li h3 {
+			font-size: 1.2rem;
+			margin-bottom: 0.3em;
+		}
+		ul.features li p {
+			font-size: 1rem;
+			line-height: 1.65em;
+		}
+
+		/* Responsive tweaks */
+		@media (max-width: 600px) {
+			#header .intro img {
+				width: 120px;
+				height: 120px;
+			}
+			ul.statistics li, ul.features li {
+				text-align: center;
+			}
+		}
+
+		/* Contact Section Styling */
+		#contact .contact-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			justify-content: center;
+			align-items: flex-start;
+			margin-top: 2rem;
+		}
+		#contact .contact-info, 
+		#contact .contact-form-wrapper {
+			flex: 1 1 320px;
+			max-width: 400px;
+			background: #f9f9f9;
+			padding: 1.5rem;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		#contact .contact-info dl.alt {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.8rem;
+			font-size: 0.95rem;
+			align-items: flex-start;
+		}
+		#contact .contact-info dt {
+			font-weight: 700;
+			color: #111;
+		}
+		#contact .contact-info dd {
+			margin: 0;
+			line-height: 1.5em;
+			color: #333;
+			word-break: break-word;
+		}
+		#contact .contact-info a {
+			color: #0056b3;
+			text-decoration: none;
+		}
+		#contact .contact-info a:hover {
+			text-decoration: underline;
+		}
+		#contact .contact-form-wrapper form fieldset {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+		#contact .contact-form-wrapper label {
+			display: block;
+			margin-bottom: 0.3rem;
+			font-weight: 600;
+			font-size: 0.95rem;
+			color: #111;
+		}
+		#contact .contact-form-wrapper input,
+		#contact .contact-form-wrapper textarea {
+			width: 100%;
+			padding: 0.6rem 0.8rem;
+			margin-bottom: 1rem;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+			font-size: 0.95rem;
+			font-family: "Inter", sans-serif;
+			outline: none;
+			transition: border 0.2s, box-shadow 0.2s;
+		}
+		#contact .contact-form-wrapper input:focus,
+		#contact .contact-form-wrapper textarea:focus {
+			border-color: #0056b3;
+			box-shadow: 0 0 5px rgba(0,86,179,0.3);
+		}
+		#contact .contact-form-wrapper input[type="submit"] {
+			background: #0056b3;
+			color: white;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+		#contact .contact-form-wrapper input[type="submit"]:hover {
+			background: #003f80;
+		}
+		#contact .form-note {
+			font-size: 0.8rem;
+			color: #555;
+			margin-top: 0.5rem;
+			text-align: center;
+		}
+		@media (max-width: 768px) {
+			#contact .contact-container {
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<div class="intro">
+					<img src="project.jpg" alt="Davina Oppong-Donkor" style="width:180px; height:180px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.2); margin-bottom:20px;">
+					<h1>Davina Oppong-Donkor</h1>
+					<p>Data Analyst | Power BI | SQL | Python | Excel</p>
+					<p>
+						Accra, Ghana |  <a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a><br/>
+						<a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank">LinkedIn</a> |
+						<a href="https://github.com/ms-veenah/" target="_blank">GitHub</a>
+					</p>
+				</div>
+			</header>
+
+			<!-- Navigation -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#about" class="active">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- About Section -->
+		<section id="about" class="main">
+			<div class="spotlight">
+				<div class="content">
+					<header class="major">
+						<h2>About Me</h2>
 					</header>
+					<p>
+						I’m a passionate <strong>Data Analyst</strong> who transforms data into actionable insights. 
+						I specialize in <strong>data cleaning, visualization, and storytelling</strong> using tools like 
+						<strong>Power BI, Excel, Python,</strong> and <strong>SQL.</strong>  
+						Through the <strong>Generation Ghana Data Analytics Program</strong>, I’ve developed hands-on experience 
+						in analyzing complex datasets to help businesses make informed, data-driven decisions.
+					</p>
+				</div>
+				<span class="image"><img src="images/analytics.jpg" alt="Data Analytics Visualization" /></span>
+			</div>
+		</section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">First Section</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
-						</ul>
-					</nav>
+		<!-- Skills Section -->
+		<section id="skills" class="main special">
+			<header class="major">
+				<h2>Technical Skills</h2>
+			</header>
+			<ul class="statistics">
+				<li class="style1"><strong>Power BI</strong>Dashboard Design</li>
+				<li class="style2"><strong>SQL</strong>Data Querying</li>
+				<li class="style3"><strong>Python</strong>Pandas, NumPy</li>
+				<li class="style4"><strong>Excel</strong>Advanced Formulas, Pivot Tables</li>
+				<li class="style5"><strong>Tableau</strong>Data Visualization</li>
+			</ul>
+			<p class="content">
+				Additional Tools: Google Sheets, Data Wrangling, DAX, Data Storytelling, Basic Statistics.
+			</p>
+		</section>
 
-				<!-- Main -->
-					<div id="main">
+		<!-- Projects Section -->
+		<section id="projects" class="main special">
+			<header class="major">
+				<h2>Projects</h2>
+				<p>Practical projects demonstrating analytical problem-solving and visualization skills.</p>
+			</header>
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
-										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+			<ul class="features">
+				<li>
+					<span class="icon solid major style1 fa-chart-bar"></span>
+					<h3>Book Sales & Pricing Dashboard (Power BI)</h3>
+					<p>
+						Designed a Power BI dashboard to analyze book sales, author performance, and pricing trends.
+						Used DAX functions for KPIs and data storytelling.
+					</p>
+					<a href="https://github.com/davinaoppong-donkor/Book-Sales-Dashboard" target="_blank" rel="noopener" class="button">View Project</a>
+				</li>
 
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Magna veroeros</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+				<li>
+					<span class="icon solid major style3 fa-database"></span>
+					<h3>Customer Purchase Insights (SQL + Excel)</h3>
+					<p>
+						Queried a customer dataset using SQL to identify top-selling products and recurring customers.
+						Visualized trends in Excel for management insights.
+					</p>
+					<a href="https://github.com/davinaoppong-donkor/Customer-Purchase-Insights" target="_blank" rel="noopener" class="button">View Project</a>
+			       </li>
 
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+                <li>
+                    <span class="icon solid major style5 fa-globe"></span>
+                    <h3>Tourism Trends Analytics (Tableau)</h3>
+                    <p>
+                        Created an interactive Tableau dashboard to visualize visitor demographics and seasonal trends
+                        across regions, enabling better tourism planning.
+                    </p>
+                    <a href="https://github.com/davinaoppong-donkor/Tourism-Trends-Analytics" target="_blank" rel="noopener" class="button">View Project</a>
+                </li>
+            </ul>
+        </section>
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
+        <!-- Education Section -->
+        <section id="education" class="main special">
+            <header class="major">
+                <h2>Education & Certifications</h2>
+            </header>
+            <ul class="statistics">
+                <li class="style1">
+                    <span class="icon solid fa-graduation-cap"></span>
+                    <strong>Generation Ghana Data Analytics Program</strong><br>2025
+                </li>
+                <li class="style2">
+                    <span class="icon solid fa-university"></span>
+                    <strong>BA, Culture and Tourism</strong><br>KNUST, 2020
+                </li>
+                <li class="style3">
+                    <span class="icon solid fa-certificate"></span>
+                    SCILLS Digital Marketing – Blossom Academy (2024)
+                </li>
+                <li class="style4">
+                    <span class="icon solid fa-laptop"></span>
+                    Virtual Assistant Program – ALX (2024)
+                </li>
+            </ul>
+        </section>
+        <!-- Redesigned Contact Section -->
+				<section id="contact" class="main special">
+					<div class="contact-header">
+						<header class="major">
+							<h2>Contact Me</h2>
+						</header>
+						<p>Let’s connect! I’m open to collaborations, analytics projects, and career opportunities.</p>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
+					
+					<!-- Contact Container for Side-by-Side Layout -->
+					<div class="contact-container">
+						<!-- Contact Information -->
+						<div class="contact-info">
 							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Location</dt>
+								<dd>Accra, Ghana</dd>
 								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
+								<dd><a href="mailto:davinaoppong126@gmail.com">davinaoppong126@gmail.com</a></dd>
+								<dt>GitHub</dt>
+								<dd><a href="https://github.com/davinaoppong-donkor" target="_blank" rel="noopener">github.com/davinaoppong-donkor</a></dd>
+								<dt>LinkedIn</dt>
+								<dd><a href="https://www.linkedin.com/in/davina-oppong-donkor/" target="_blank" rel="noopener">linkedin.com/in/davina-oppong-donkor</a></dd>
 							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+						</div>
+						
+						<!-- Contact Form -->
+						<div class="contact-form-wrapper">
+							<form method="post" action="https://formspree.io/f/YOUR_FORMSPREE_ID" enctype="multipart/form-data">
+								<fieldset>
+									<label for="name">Your Name</label>
+									<input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+									
+									<label for="email">Your Email</label>
+									<input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+									
+									<label for="subject">Subject</label>
+									<input type="text" id="subject" name="subject" placeholder="Subject" required aria-label="Subject">
+									
+									<label for="message">Your Message</label>
+									<textarea id="message" name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+									
+									<input type="submit" value="Send Message">
+								</fieldset>
+							</form>
+							<p class="form-note">Note: This form uses Formspree for email delivery. Replace the action URL with your endpoint for functionality.</p>
+						</div>
+					</div>
+				</section>
 
 			</div>
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; 2025 Davina Oppong-Donkor | Data Analytics Portfolio</p>
+			</footer>
+
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser
